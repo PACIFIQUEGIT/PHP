@@ -47,7 +47,7 @@ require ('db_con.php');
                                 </tr>
                             <?php } }else
                             { 
-                                echo "<h4>No records found</h4>";
+                                echo "<h4>No Records Found</h4>";
                             }
                             ?>
                             

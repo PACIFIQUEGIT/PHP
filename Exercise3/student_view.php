@@ -50,7 +50,7 @@ require 'db_con.php';
                             </p>
                         </div>
                     <?php
-                    }else{echo '<h4> No such id found</h4>';} 
+                    }else{echo '<h4> No Such Id Found</h4>';} 
                     }                
                     
                     ?>

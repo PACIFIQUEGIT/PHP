@@ -26,29 +26,29 @@ require 'db_con.php';
                         $student = mysqli_fetch_array($query_run);
                     ?>
                         <form action="code.php" method="post">
-                            <input type="hidden" name="student_id" value="<?php echo $student['id']; ?>">
+                            <input type="hidden" name="student_id" value="<?php echo htmlspecialchars($student['id']) ; ?>">
                         <div class="mb-3">
                             <label for="">Names:</label>
-                            <input type="text" name="name" value="<?php echo $student['name']; ?>" class="form-control" >
+                            <input type="text" name="name" value="<?php echo htmlspecialchars($student['name']) ; ?>" class="form-control" >
                         </div>
                         <div class="mb-3">
                             <label for="">Email:</label>
-                            <input type="text" name="email" value="<?php echo $student['email']; ?>" class="form-control" >
+                            <input type="text" name="email" value="<?php echo htmlspecialchars($student['email']) ; ?>" class="form-control" >
                         </div>
                         <div class="mb-3">
                             <label for="">Phone:</label>
-                            <input type="text" name="phone" value="<?php echo $student['phone']; ?>" class="form-control" >
+                            <input type="text" name="phone" value="<?php echo htmlspecialchars($student['phone']) ; ?>" class="form-control" >
                         </div>
                         <div class="mb-3">
                             <label for="">Course:</label>
-                            <input type="text" name="course" value="<?php echo $student['course']; ?>" class="form-control" >
+                            <input type="text" name="course" value="<?php echo htmlspecialchars($student['course']) ; ?>" class="form-control" >
                         </div>
                         <div>
                             <input type="submit" name="update_student" class="btn btn-primary" value="Update Student">
                         </div>
                     </form>
                     <?php
-                    }else{echo '<h4> No such id found</h4>';} 
+                    }else{echo '<h4> No Such Id Found</h4>';} 
                     }                
                     
                     ?>
