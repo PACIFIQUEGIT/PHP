@@ -12,7 +12,7 @@
             <?php include 'message.php'; ?>
             <div class="card">
                 <div class="card-header">
-                    <h4>Student Add</h4> <a href="index.php" class="btn btn-danger float-end">Back</a>
+                    <h4>Student Add <a href="index.php" class="btn btn-danger float-end">Back</a></h4> 
                 </div>
                 <div class="card-body">
                     <form action="code.php" method="post">

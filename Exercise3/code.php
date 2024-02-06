@@ -64,7 +64,7 @@ if(isset($_POST['delete_student']))
         header('Location:index.php');
         exit(0);
     }
-}
+    }
 
 
 ?>

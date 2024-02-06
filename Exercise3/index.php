@@ -40,9 +40,9 @@ require ('db_con.php');
                                 <td>
                                     <a href="student_view.php?id= <?php echo $student['id']; ?>" class="btn btn-info">View</a>
                                     <a href="student_edit.php?id= <?php echo $student['id']; ?>" class="btn btn-success">Edit</a>
-                                    <form action="code.php" method="POST" class="d-inline">
-                                    <button name="delete_student" value="<?php echo $student['id'];?>" class="btn btn-danger">Delete</button>
-                                    </form>
+                                    <div class="d-inline">
+                                    <button onclick="delete_alert()" value="<?php echo $student['id'];?>" class="btn btn-danger">Delete</button>
+                                    </div>
                                 </td>
                                 </tr>
                             <?php } }else
@@ -55,6 +55,20 @@ require ('db_con.php');
                     </table>
                 </div>
             </div>
-        </div>    
+        </div>  
+    
+<div id="del" class="delete" onclick="fade_alert()">
+<div class="container text-center">
+<p>Are you sure you want to delete?</p>
+<form action="code.php" method="POST">
+  <div class="d-inline">
+  <button type="submit" class="btn btn-white border" name="delete_student" value="<?php echo htmlspecialchars($student['id']);?>" onclick="fade_alert">Yes</button>
+  <button type="button" class="btn btn-white border">No</button>
+  </div>
+</form>
+</div>
+</div>
+   </div>
+</div>          
 
 <?php include 'includes/footer.php'; ?>
