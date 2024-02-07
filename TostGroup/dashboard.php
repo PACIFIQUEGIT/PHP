@@ -1,6 +1,5 @@
 <?php
-session_start();
-require 'config/db_con.php';
+include 'code.php';
 ?>
 
 <!doctype html>
