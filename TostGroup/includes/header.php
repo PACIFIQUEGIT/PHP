@@ -1,5 +1,5 @@
 <?php
-
+include 'code.php';
 ?>
 <!doctype html>
 <html lang="en">
@@ -10,7 +10,7 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Hello, world!</title>
     <style>
       .login
@@ -23,7 +23,7 @@
         margin-left: 35%;
         top:200px;
         display: none;
-      }
+              }
       .signin
       {
         position: absolute;
@@ -34,23 +34,23 @@
         margin-left: 35%;
         top:200px;
         display: none;
-      }
+              }
       #a
       {
         text-decoration:none;
         color:black;
       }
-    </style>
+          </style>
   </head>
   <body>
   <nav class="navbar navbar-expand-lg">
-        <a href="" class="navbar-brand">TOST GROUP</a>
+        <a href="index.php" class="navbar-brand">TOST GROUP SD</a>
         <ul class="float-end nav d-flex">
           <?php
           if(isset($_SESSION['message']))
-          { 
-            echo "$name,"; 
-          }
+          { ?>
+           <?php echo htmlspecialchars($name);?> 
+          <?php }
           ?>  
         </ul>
     </nav> 

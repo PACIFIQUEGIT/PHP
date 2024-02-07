@@ -1,9 +1,9 @@
 
 </div>
 <footer class="bg-muted text-center d-flex pt-4">
-  <div class="col"><p><b><a id="a" href="tel: +250 788 844 934">+250 788 844 934</a></b></p></div>
-  <div class="col"><p><b><a id="a" href="mailto: info@tostgroup.com">info@tostgroup.com</a></b></p></div>
-  <div class="col"><p><b><a id="a" target=_blank href="https://tostgroup.com/">tostgroup.com</a></b></p></div>
+  <div class="col"><p><b><a id="a" href="tel: +250 788 844 934"><i class='bx bxs-phone-call'></i> +250 788 844 934</a></b></p></div>
+  <div class="col"><p><b><a id="a" href="mailto: info@tostgroup.com"><i class='bx bxs-envelope' ></i> info@tostgroup.com</a></b></p></div>
+  <div class="col"><p><b><a id="a" target=_blank href="https://tostgroup.com/"><i class='bx bx-globe'></i> tostgroup.com</a></b></p></div>
 </footer>
 <!-- Optional JavaScript; choose one of the two! -->
 
@@ -31,7 +31,8 @@
         document.getElementById("login").style.display="none";
         document.getElementById("signin").style.display="none";
       }
-
+      
+      
     </script>
   </body>
 </html>
