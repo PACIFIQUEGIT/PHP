@@ -134,12 +134,12 @@ include 'includes/header.php';
         <form action="index.php" method="POST">
             <div class="my-1">
                 <label for="">Username:</label> <br>
-                <input type="text" name="name1" value="<?php echo htmlspecialchars($name);?>" class="form-control">
+                <input type="text" id="res" name="name1" value="<?php echo htmlspecialchars($name);?>" class="form-control">
                 <div class="text-danger"><?php echo $errors['name1'];?></div>
             </div>
             <div class="my-1">
                 <label for="">Email:</label> <br>
-                <input type="text" name="email" value="<?php echo htmlspecialchars($email);?>" class="form-control">
+                <input type="text" id="res" name="email" value="<?php echo htmlspecialchars($email);?>" class="form-control">
                 <div class="text-danger"><?php echo $errors['email'];?></div>
             </div>
             <div class="my-1">

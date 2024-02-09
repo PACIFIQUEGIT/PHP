@@ -87,11 +87,13 @@
       {
         document.getElementById("signin").style.display="block";
         document.getElementById("login").style.display="none";
+        document.getElementById("res").value="";
       }
       function login() 
       {
         document.getElementById("login").style.display="block";
         document.getElementById("signin").style.display="none";
+        document.getElementById("res").value="";
       }
       function closee()
       {

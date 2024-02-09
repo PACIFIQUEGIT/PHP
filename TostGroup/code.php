@@ -17,11 +17,6 @@ if(isset($_POST['signin']))
         $errors['email'] = 'Email must be a valid email address';
     }
     }
-    if(empty($_POST['name1'])) 
-    {
-        $_SESSION['prevent1'] = 'display: block';
-        $errors['name1'] = 'Username is empty';
-    }
     if(empty($_POST['password']))
     {
       $_SESSION['prevent1'] = 'display: block';
@@ -32,12 +27,15 @@ if(isset($_POST['signin']))
       $_SESSION['prevent1'] = 'display: block';
       $errors['gender'] = 'Must select a gender';
     }
-    if(!array_filter($errors))
+    if(empty($_POST['name1'])) 
+    {
+        $_SESSION['prevent1'] = 'display: block';
+        $errors['name1'] = 'Username is empty';
+    }else
     {
     $name = mysqli_real_escape_string($con, $_POST['name1']);
     $password = mysqli_real_escape_string($con, $_POST['password']); 
     $email = mysqli_real_escape_string($con, $_POST['email']);
-    $gender = mysqli_real_escape_string($con, $_POST['gender']);
     $sql = "SELECT * FROM users WHERE name = '$name'";
     $query_run = mysqli_query($con, $sql); 
     if(mysqli_num_rows($query_run)>0)
@@ -46,6 +44,9 @@ if(isset($_POST['signin']))
       $errors['name1'] = 'Username not available';
     }else
     {
+    if(!array_filter($errors))
+    {
+    $gender = mysqli_real_escape_string($con, $_POST['gender']);
     $sql = "INSERT INTO users(name, password, email, gender) VALUES('$name', '$password', '$gender', '$email')";
     $query_run = mysqli_query($con, $sql);
     if($query_run)
@@ -54,6 +55,7 @@ if(isset($_POST['signin']))
         header("Location:dashboard.php");
         exit(0);
     } 
+    }
     }
     }
 }
