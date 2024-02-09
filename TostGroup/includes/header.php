@@ -321,6 +321,18 @@
         text-decoration: none;
         color:white;
       }
+      .nav-link
+      {
+        color:black;
+      }
+      .active
+      {
+        color:blue;
+      }
+      .dropdown:hover .dropdown-menu
+      {
+        display:block;
+      }
     </style>
   </head>
   <body>

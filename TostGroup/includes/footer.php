@@ -113,6 +113,22 @@
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
       }
+      document.addEventListener("DOMContentLoaded", function() 
+      {
+      var currentUrl = window.location.href;
+
+      var links = document.querySelectorAll('.nav-link');
+
+          links.forEach(function (link) 
+          {
+            if (link.href === currentUrl) 
+            {
+               link.classList.add('active');
+            }
+          }
+          );
+       }
+       );
     </script>
   </body>
 </html>
