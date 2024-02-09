@@ -7,8 +7,14 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <title>Hello, world!</title>
     <style>
+      #fts
+      {
+        font-size: 13px;
+      }
       .login
       {
         position: absolute;
@@ -152,6 +158,169 @@
         width: 40px;
         display: none;
       }
+      #dib
+      {
+        display: inline-block;
+        background-color: rgba(224, 224, 253, 0.8);
+      }
+      .card-body
+      {
+        background-color: rgba(224, 224, 253, 0.8);
+      }
+      .card-footer
+      {
+        background-color: rgba(224, 224, 253, 0.8);
+      }
+      #dib:hover
+      {
+        color:white;
+        background-color:blue;
+        #cb{color:white;};
+        position:relative;
+        top:-15px;
+        transition:1s;
+      }
+      #cb
+      {
+        font-size: 50px;
+        color: blue;
+      }
+      #cbl
+      {
+        color:blue;
+        font-weight: bold;
+      }
+      #lis
+      {
+        color:blue;
+      }
+      #list
+      {
+        list-style-type: none;
+      }
+      #course
+      {
+        position:absolute;
+        bottom:0;
+        right:0;
+        background-color:white;
+        z-index: 1;
+      }
+      #bgcs1
+      {
+        position: relative;
+        height:230px;
+        background-image:url('img/html.jpeg');
+        background-repeat: no-repeat;
+        background-size: 473px 230px;
+      }
+      #bgcs2
+      {
+        position: relative;
+        height:230px;
+        background-image:url('img/css.jpeg');
+        background-repeat: no-repeat;
+        background-size: 473px 230px;
+      }
+      #bgcs3
+      {
+        position: relative;
+        height:230px;
+        background-image:url('img/bs.jpeg');
+        background-repeat: no-repeat;
+        background-size: 283px 228px;
+      }
+      #bgcs4
+      {
+        position: relative;
+        height:230px;
+        background-image:url('img/js.jpeg');
+        background-repeat: no-repeat;
+        background-size: 283px 228px;
+      }
+      #bgcs5
+      {
+        position: relative;
+        height:230px;
+        background-image:url('img/php.jpeg');
+        background-repeat: no-repeat;
+        background-size: 283px 228px;
+      } 
+      #bgcs3:hover, #bgcs4:hover, #bgcs5:hover
+      {
+        background-size: 290px 230px;
+        transition:.5s;
+      }
+      #bgcs1:hover, #bgcs2:hover
+      {
+        background-size: 480px 240px;
+        transition:.5s;
+      }
+      #bgcs3a
+      {
+        position: relative;
+        height:230px;
+        background-image:url('img/course-2.jpg');
+        background-repeat: no-repeat;
+        background-size: 285px 230px;
+      }
+      #bgcs3b
+      {
+        position: relative;
+        height:230px;
+        background-image:url('img/course-3.jpg');
+        background-repeat: no-repeat;
+        background-size: 285px 230px;
+      }
+      #bgcs3c
+      {
+        position: relative;
+        height:230px;
+        background-image:url('img/course-2.jpg');
+        background-repeat: no-repeat;
+        background-size: 285px 230px;
+      }
+      #bgcs3a:hover, #bgcs3b:hover, #bgcs3c:hover, #bgcs3d:hover
+      {
+        background-size: 290px 235px;
+        transition:1s;
+      }
+      #btng
+      {
+        position: relative;
+        bottom:-170px;
+      }
+      #btnga
+      {
+        position: relative;
+        bottom:-208px;
+        background-color: rgba(224, 224, 253, 1);
+        font-size: 30px;
+      }
+      #bgcs3d
+      {
+        position: relative;
+        height:230px;
+        background-image:url('img/team-2.jpg');
+        background-repeat: no-repeat;
+        background-size: 285px 230px;
+      }
+      .b
+      {
+        background-color: rgba(224, 224, 253, 0.8);
+      }
+      #about
+      {
+        background-image: url('img/2.jpeg');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height:300px;
+      }
+      #hrefa
+      {
+        text-decoration: none;
+        color:white;
+      }
     </style>
   </head>
   <body>
@@ -159,17 +328,16 @@
         <a href="index.php" class="navbar-brand">TOST GROUP SD</a>
         <ol class="nav">
         <li class="nav-item"><a href="index.php" class="nav-link btn btn-white">Home</a></li> 
-        <li class="nav-item"><a href="" class="nav-link btn btn-white">About</a></li>
-        <li class="nav-item"><a href="" class="nav-link btn btn-white">Courses</a></li>
+        <li class="nav-item"><a href="about.php" class="nav-link btn btn-white">About</a></li>
+        <li class="nav-item"><a href="courses.php" class="nav-link btn btn-white">Courses</a></li>
         <li class="nav-item dropdown">
           <a href="#" data-bs-toggle="dropdown" class="nav-link dropdown-toggle btn btn-white">Pages</a>
           <ul class="dropdown-menu">
-          <li><a id="a" class="dropdown-item" href="tel: +250 788 844 934"><i class='bx bxs-phone-call'></i> +250 788 844 934</a></li>
-          <li><a id="a" class="dropdown-item" href="mailto: info@tostgroup.com"><i class='bx bxs-envelope' ></i> info@tostgroup.com</a></li>
-          <li><a id="a" class="dropdown-item" target=_blank href="https://tostgroup.com/"><i class='bx bx-globe'></i> tostgroup.com</a></li>
+          <li><a id="a" class="dropdown-item" href="ourteam.php">Our Team</a></li>
+          <li><a id="a" class="dropdown-item" href="testimonial.php">Testimonial</a></li>
           </ul>
         </li>  
-        <li class="nav-item"><a href="" class="nav-link btn btn-white">Contact</a></li>    
+        <li class="nav-item"><a href="contact.php" class="nav-link btn btn-white">Contact</a></li>    
         </ol>
         <ul class="nav">
             <li class="nav-item"><button onclick="login()" type="button" class="nav-link btn btn-white">Log in</button></li>

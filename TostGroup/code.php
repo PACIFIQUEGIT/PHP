@@ -72,7 +72,7 @@ if(isset($_POST['login']))
     $query_run = mysqli_query($con, $sql); 
     if(mysqli_num_rows($query_run)>0)
     {
-      $_SESSION['name2'] = $name;
+      $_SESSION['name'] = $name;
         header("Location:dashboard.php");
         
     } else

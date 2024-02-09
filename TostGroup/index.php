@@ -120,5 +120,282 @@ include 'includes/header.php';
     </div>
     </div>
   </div>
-
+  <div class="container my-5 pt-3">
+  <div class="justify-content-around row mt-5">
+    <div id="dib" class="text-center col-3 py-4">
+      <p id="cb"><i class="fa fa-mortar-board"></i></p>
+      <h5>Skilled Instructors</h5>
+      <p>Diam elitr kasd sed at elitr <br> sed ipsum justo dolor sed <br> clita amet diam</p>
+    </div>
+    <div id="dib" class="text-center col-3 py-4">
+    <p id="cb"><i class='fa fa-globe'></i></p>
+      <h5>Online Classes</h5>
+      <p>Diam elitr kasd sed at elitr <br> sed ipsum justo dolor sed <br> clita amet diam</p>
+    </div>
+  </div>
+  </div>
+  <div class="container my-5 justify-content-around">
+    <div class="row my-5 py-5">
+      <div class="col-6">
+        <img src="img/course-2.jpg" width="550px" height="450px" alt="">
+      </div>
+      <div class="col-6">
+        <p id="cbl">ABOUT US</p>
+        <h1>Welcome to Software Development</h1>
+        <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam <br> 
+           amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+        <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam <br> 
+           amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita <br> 
+           duo justo magna dolore erat amet
+        </p>
+        <div class="row my-3">
+          <div class="col ps-0">
+            <ul id="list" class="ms-0 ps-2">
+              <li><i id="lis" class='bx bx-right-arrow-alt'></i> Skilled Instructors</li>
+              <li><i id="lis" class='bx bx-right-arrow-alt'></i> International Certificate</li>
+              <li><i id="lis" class='bx bx-right-arrow-alt'></i> Online Classes</li>
+            </ul>
+          </div>
+          <div class="col">
+            <ul id="list">
+              <li><i id="lis" class='bx bx-right-arrow-alt'></i> Online Classes</li>
+              <li><i id="lis" class='bx bx-right-arrow-alt'></i> Skilled Instructors</li>
+              <li><i id="lis" class='bx bx-right-arrow-alt'></i> International Certificate</li>
+            </ul>
+          </div>
+        </div>
+        <a href="#" class="btn btn-primary mt-2">Read More</a>
+      </div>
+    </div>
+  </div>
+  <div class="container text-center my-5">
+  <p id="cbl">CATEGORIES</p>
+  <h1>Courses Categories</h1>
+  <div class="row mt-5 justify-content-around">
+    <div id="bgcs1" class="col-5">
+      <div id="course"><b>HTML</b></div>
+    </div>
+    <div id="bgcs2" class="col-5">
+      <div id="course"><b>CSS</b></div>
+    </div>
+  </div>
+  <div class="row mt-5 justify-content-around">
+    <div id="bgcs3" class="col-3">
+      <div id="course"><b>BOOTSTRAP</b></div>
+    </div>
+    <div id="bgcs4" class="col-3">
+      <div id="course"><b>JAVASCRIPT</b></div>
+    </div>
+    <div id="bgcs5" class="col-3">
+      <div id="course"><b>PHP</b></div>
+    </div>
+  </div>
+  </div>
+  <div class="container text-center my-5">
+  <p id="cbl">COURSES</p>
+  <h1>Popular Courses</h1>
+  <div class="row mt-5 justify-content-around">
+    <div class="col-3">
+    <div class="card">
+      <div class="card-header p-0">
+      <div id="bgcs3a">
+        <div id="btng" class="btn-group">
+          <a href="" class="btn btn-primary">Read More</a>
+          <a href="" class="btn btn-primary">Join Now</a>
+        </div>
+      </div>
+      </div>
+      <div class="card-body">
+      <p><b>Rwf</b> <br>
+      <span style="font-size: 10px;" class="text-danger">
+            <span style="color:blue;font-size: 20px;" class="fa fa-star"></span>
+            <span style="color:blue;font-size: 20px;" class="fa fa-star"></span>
+            <span style="color:blue;font-size: 20px;" class="fa fa-star"></span>
+            <span style="color:blue;font-size: 20px;" class="fa fa-star"></span>
+            <span style="color:blue;font-size: 20px;" class="fa fa-star"></span>
+            <span style="color:black;font-size: 20px;">(123)</span>
+        </span>
+      </p>
+        <p><b>Web Design & Development Course for Beginners</b></p>
+      </div>
+      <div class="card-footer d-flex p-0">
+        <div id="fts" class="col-4 border border-muted"><i class='bx bxs-user text-primary'></i>John Doe</div>
+        <div id="fts" class="col-4 border border-muted"><i class='bx bxs-time-five text-primary' ></i>Hrs</div>
+        <div id="fts" class="col-4 border border-muted"><i class='bx bxs-user text-primary'></i>30 Students</div>
+      </div>
+    </div>
+    </div>
+    <div class="col-3">
+    <div class="card">
+      <div class="card-header p-0">
+      <div id="bgcs3b">
+      <div id="btng" class="btn-group">
+          <a href="" class="btn btn-primary">Read More</a>
+          <a href="" class="btn btn-primary">Join Now</a>
+        </div>
+      </div>
+      </div>
+      <div class="card-body">
+      <p><b>Rwf</b> <br>
+      <span style="font-size: 10px;" class="text-danger">
+            <span style="color:blue;font-size: 20px;" class="fa fa-star"></span>
+            <span style="color:blue;font-size: 20px;" class="fa fa-star"></span>
+            <span style="color:blue;font-size: 20px;" class="fa fa-star"></span>
+            <span style="color:blue;font-size: 20px;" class="fa fa-star"></span>
+            <span style="color:blue;font-size: 20px;" class="fa fa-star"></span>
+            <span style="color:black;font-size: 20px;">(123)</span>
+        </span>
+      </p>
+        <p><b>Web Design & Development Course for Beginners</b></p>
+      </div>
+      <div class="card-footer d-flex p-0">
+        <div id="fts" class="col-4 border border-muted"><i class='bx bxs-user text-primary'></i>John Doe</div>
+        <div id="fts" class="col-4 border border-muted"><i class='bx bxs-time-five text-primary' ></i>Hrs</div>
+        <div id="fts" class="col-4 border border-muted"><i class='bx bxs-user text-primary'></i>30 Students</div>
+      </div>
+    </div>
+    </div>
+    <div class="col-3">
+    <div class="card">
+      <div class="card-header p-0">
+      <div id="bgcs3c">
+      <div id="btng" class="btn-group">
+          <a href="" class="btn btn-primary">Read More</a>
+          <a href="" class="btn btn-primary">Join Now</a>
+        </div>
+      </div>
+      </div>
+      <div class="card-body">
+      <p><b>Rwf</b> <br>
+      <span style="font-size: 10px;" class="text-danger">
+            <span style="color:blue;font-size: 20px;" class="fa fa-star"></span>
+            <span style="color:blue;font-size: 20px;" class="fa fa-star"></span>
+            <span style="color:blue;font-size: 20px;" class="fa fa-star"></span>
+            <span style="color:blue;font-size: 20px;" class="fa fa-star"></span>
+            <span style="color:blue;font-size: 20px;" class="fa fa-star"></span>
+            <span style="color:black;font-size: 20px;">(123)</span>
+        </span>
+      </p>
+        <p><b>Web Design & Development Course for Beginners</b></p>
+      </div>
+      <div class="card-footer d-flex p-0">
+        <div id="fts" class="col-4 border border-muted"><i class='bx bxs-user text-primary'></i>John Doe</div>
+        <div id="fts" class="col-4 border border-muted"><i class='bx bxs-time-five text-primary' ></i>Hrs</div>
+        <div id="fts" class="col-4 border border-muted"><i class='bx bxs-user text-primary'></i>30 Students</div>
+      </div>
+    </div>
+    </div>
+  </div>
+  </div>
+  <div class="container text-center my-5">
+  <p id="cbl">INSTRUCTORS</p>
+  <h1>Expert Instructors</h1>
+  <div class="row mt-5 justify-content-around">
+    <div class="col-3">
+       <div class="card">
+         <div class="card-header p-0">
+           <div id="bgcs3d">
+             <div id="btnga" class="btn-group px-1">
+             <a href="" ><i class='bx bxl-facebook-square' ></i></a>
+             <a href="" ><i class='bx bxl-twitter' ></i></a>
+             <a href="" ><i class='bx bxl-instagram-alt' ></i></a>
+             </div>
+           </div>
+         </div>
+         <div class="card-body">
+         <p><b>Instructor Name</b> <br>
+               Designation</p>
+         </div>
+       </div>
+    </div>
+    <div class="col-3">
+       <div class="card">
+         <div class="card-header p-0">
+           <div id="bgcs3d">
+             <div id="btnga" class="btn-group px-1">
+             <a href="" ><i class='bx bxl-facebook-square' ></i></a>
+             <a href="" ><i class='bx bxl-twitter' ></i></a>
+             <a href="" ><i class='bx bxl-instagram-alt' ></i></a>
+             </div>
+           </div>
+         </div>
+         <div class="card-body">
+         <p><b>Instructor Name</b> <br>
+               Designation</p>
+         </div>
+       </div>
+    </div>
+    <div class="col-3">
+       <div class="card">
+         <div class="card-header p-0">
+           <div id="bgcs3d">
+             <div id="btnga" class="btn-group px-1">
+             <a href="" ><i class='bx bxl-facebook-square' ></i></a>
+             <a href="" ><i class='bx bxl-twitter' ></i></a>
+             <a href="" ><i class='bx bxl-instagram-alt' ></i></a>
+             </div>
+           </div>
+         </div>
+         <div class="card-body">
+         <p><b>Instructor Name</b> <br>
+               Designation</p>
+         </div>
+       </div>
+    </div>
+  </div>  
+</div>
+  <div class="container text-center my-5">
+    <p id="cbl">TESTIMONIAL</p>
+  <h1>Our Students Say!</h1>
+  <div class="row mt-5 justify-content-between">
+        <div class="col-3">
+           <div class="justify-content-center row">
+             <div style="width: 150px; height: 150px;;" class="border rounded-circle justify-content-around row p-1">
+             <img style="width: 140px; height: 140px;;" class="card-img-top  rounded-circle" src="img/11.jpg" alt="image">
+             </div>
+             <div id="">
+             <p><b>Client Name</b> <br>
+                   Profession</p>
+             </div>
+             <div class="b">
+             <p>Tempor erat elitr rebum at clita. Diam dolor 
+                diam ipsum sit diam amet diam et eos. 
+                Clita erat ipsum et lorem et sit.</p>
+             </div>
+            </div>
+        </div>
+        <div class="col-3">
+           <div class="justify-content-center row">
+             <div style="width: 150px; height: 150px;;" class="border rounded-circle justify-content-around row p-1">
+             <img style="width: 140px; height: 140px;;" class="card-img-top  rounded-circle" src="img/11.jpg" alt="image">
+             </div>
+             <div id="">
+             <p><b>Client Name</b> <br>
+                   Profession</p>
+             </div>
+             <div class="b">
+             <p>Tempor erat elitr rebum at clita. Diam dolor 
+                diam ipsum sit diam amet diam et eos. 
+                Clita erat ipsum et lorem et sit.</p>
+             </div>
+            </div>
+        </div>
+        <div class="col-3">
+           <div class="justify-content-center row">
+             <div style="width: 150px; height: 150px;;" class="border rounded-circle justify-content-around row p-1">
+             <img style="width: 140px; height: 140px;;" class="card-img-top  rounded-circle" src="img/11.jpg" alt="image">
+             </div>
+             <div id="">
+             <p><b>Client Name</b> <br>
+                   Profession</p>
+             </div>
+             <div class="b">
+             <p>Tempor erat elitr rebum at clita. Diam dolor 
+                diam ipsum sit diam amet diam et eos. 
+                Clita erat ipsum et lorem et sit.</p>
+             </div>
+            </div>
+        </div>
+  </div>  
+</div>
 <?php include 'includes/footer.php'; ?>
