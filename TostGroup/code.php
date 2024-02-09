@@ -34,8 +34,6 @@ if(isset($_POST['signin']))
     }else
     {
     $name = mysqli_real_escape_string($con, $_POST['name1']);
-    $password = mysqli_real_escape_string($con, $_POST['password']); 
-    $email = mysqli_real_escape_string($con, $_POST['email']);
     $sql = "SELECT * FROM users WHERE name = '$name'";
     $query_run = mysqli_query($con, $sql); 
     if(mysqli_num_rows($query_run)>0)
@@ -46,6 +44,8 @@ if(isset($_POST['signin']))
     {
     if(!array_filter($errors))
     {
+    $password = mysqli_real_escape_string($con, $_POST['password']); 
+    $email = mysqli_real_escape_string($con, $_POST['email']);
     $gender = mysqli_real_escape_string($con, $_POST['gender']);
     $sql = "INSERT INTO users(name, password, email, gender) VALUES('$name', '$password', '$gender', '$email')";
     $query_run = mysqli_query($con, $sql);
