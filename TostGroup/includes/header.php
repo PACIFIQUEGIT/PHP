@@ -333,6 +333,18 @@
       {
         display:block;
       }
+      .delete
+      {
+        position: absolute;
+        z-index: 1;
+        border: 1px solid black;
+        border-radius: 3px;
+        background-color: white;
+        max-width: 25%;
+        margin-left: 35%;
+        top:300px;
+        display: none;
+      }
     </style>
   </head>
   <body>

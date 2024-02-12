@@ -88,12 +88,16 @@
         document.getElementById("signin").style.display="block";
         document.getElementById("login").style.display="none";
         document.getElementById("res").value="";
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
       }
       function login() 
       {
         document.getElementById("login").style.display="block";
         document.getElementById("signin").style.display="none";
         document.getElementById("res").value="";
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
       }
       function closee()
       {

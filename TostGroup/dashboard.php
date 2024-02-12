@@ -85,7 +85,7 @@ include 'code.php';
                 </div>
                 <div class="row text-white border-top py-3">
                     <p><b>INTERFACE</b></p>
-                    <p><i class='bx bxs-cog'></i> Components <span class="float-end"><i class='bx bx-chevron-right'></i></span> </p>
+                    <p><a style="color:white" href="register.php">Register Now</a> <span class="float-end"><i class='bx bx-chevron-right'></i></span> </p>
                     <p><i class='bx bxs-wrench' ></i> Utilities <span class="float-end"><i class='bx bx-chevron-right'></i></span></p>
                 </div>
                 <div class="row text-white border-top py-3">
@@ -102,7 +102,7 @@ include 'code.php';
         <div id="wider" class="column bg-light">
             <div class="container">
                 <div class="row">
-                <p><span id="dash">DASHBOARD</span><span class="float-end"> <?php require 'message.php';?></span><span class="float-end"><a href="index.php">logout</a></span></p>
+                <p><span id="dash">Welcome, <?php require 'message.php';?></span><span class="float-end"> </span><span class="float-end"><a href="index.php">logout</a></span></p>
                 </div>    
                 <div class="row">
                     <div class="col ">
