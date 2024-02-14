@@ -1,7 +1,7 @@
 <?php
 session_start();
 require 'config/db_con.php'; 
-$username = $name = $password = $email = $gender = $province = $district = $sector = $course = '';
+$row_id = $title = $description =  $row = $username = $name = $password = $email = $gender = $province = $district = $sector = $course = $header = $paragraph = $filename = '';
 $errors = array('username' => '', 'name1' => '', 'password' => '','name2' => '','email' => '', 'gender' =>'', 'genderr' =>'', 'namer' => '', 'emailr' => '', 'sectorr' => '', 'districtr' => '', 'provincer' => '', 'course' => '');
 if(isset($_POST['signin']))
 {
@@ -147,7 +147,8 @@ if(isset($_POST['signinr']))
     $gender = mysqli_real_escape_string($con, $_POST['genderr']);
     $namer = mysqli_real_escape_string($con, $_POST['namer']);
     $course = mysqli_real_escape_string($con, $_POST['course']);
-    $sql = "INSERT INTO registered(name, course, district, province, gender, email, sector) VALUES('$namer', '$course', '$district','$province', '$gender', '$email', '$sector')";
+    $status = mysqli_real_escape_string($con, $_POST['status']);
+    $sql = "INSERT INTO registered_students(name, course, district, province, gender, email, sector, status) VALUES('$namer', '$course', '$district','$province', '$gender', '$email', '$sector', '$status')";
     $query_run = mysqli_query($con, $sql);
     if($query_run)
     {   $_SESSION['message'] = "Student registerd successfully."; 
@@ -161,7 +162,7 @@ if(isset($_POST['signinr']))
 if(isset($_POST['delete_student']))
 {
     $student_id = mysqli_real_escape_string($con, $_POST['delete_student']);
-    $sql = "DELETE FROM registered WHERE id = '$student_id'";
+    $sql = "DELETE FROM registered_students WHERE id = '$student_id'";
     $query_run = mysqli_query($con, $sql);
     if($query_run)
     {
@@ -174,4 +175,204 @@ if(isset($_POST['delete_student']))
         exit(0);
     }
     }
+if(isset($_POST['approve_student']))
+{
+  $student_id = mysqli_real_escape_string($con, $_POST['approve_student']); 
+  $status = "Approved";
+  $sql = "UPDATE  registered_students SET status = '$status' WHERE id = '$student_id'";
+  $query_run = mysqli_query($con, $sql);
+    if($query_run)
+    {
+        $_SESSION['message'] = 'Student approved Successfully';
+        header('Location:registeredstudents.php');
+        exit(0);
+    }
+}
+if(isset($_POST['adm_upload']))
+{
+  $header = mysqli_real_escape_string($con, $_POST['header']);
+  $paragraph = mysqli_real_escape_string($con, $_POST['paragraph']); 
+  $filename = $_FILES['image']['name'];
+  $filetemp = $_FILES['image']['tmp_name'];
+  $folder = 'img/' . $filename;
+  $sql = "INSERT INTO images (header, paragraph, file) VALUES ('$header', '$paragraph', '$filename')";
+  $query = mysqli_query($con, $sql);
+  if(move_uploaded_file($filetemp, $folder))
+  {
+    $_SESSION['message'] = "File saved successfully";
+    header("Location:adminpage.php");
+    exit(0);
+  } else
+  {
+    $_SESSION['message'] = "File not saved";
+  }
+
+}
+if(isset($_POST['adm_edit']))
+{
+  $row_id = mysqli_real_escape_string($con, $_POST['id']);
+  $header = mysqli_real_escape_string($con, $_POST['header']);
+  $paragraph = mysqli_real_escape_string($con, $_POST['paragraph']); 
+  $filename = $_FILES['image']['name'];
+  $filetemp = $_FILES['image']['tmp_name'];
+  $folder = 'img/' . $filename;
+  $sql = "UPDATE images SET header = '$header', paragraph = '$paragraph' file = '$filename' WHERE id = $row_id";
+  $query = mysqli_query($con, $sql);
+  if(move_uploaded_file($filetemp, $folder))
+  {
+    $_SESSION['message'] = "File saved successfully";
+    header("Location:adminpage.php");
+    exit(0);
+  } else
+  {
+    $_SESSION['message'] = "File not saved";
+  }
+
+}
+if(isset($_POST['s_upload']))
+{
+  $title = mysqli_real_escape_string($con, $_POST['title']);
+  $description = mysqli_real_escape_string($con, $_POST['description']); 
+  $sql = "INSERT INTO services (title, description) VALUES ('$title', '$description')";
+  $query = mysqli_query($con, $sql);
+  if($query)
+  {
+    $_SESSION['message'] = "File saved successfully";
+    header("Location:services.php");
+    exit(0);
+  } else
+  {
+    $_SESSION['message'] = "File not saved";
+  }
+
+}
+if(isset($_POST['s_edit']))
+{
+  $row_id = mysqli_real_escape_string($con, $_POST['id']);
+  $title = mysqli_real_escape_string($con, $_POST['title']);
+  $description = mysqli_real_escape_string($con, $_POST['description']); 
+  $sql = "UPDATE services SET title = '$title', description = '$description' WHERE id = $row_id";
+  $query = mysqli_query($con, $sql);
+  if($query)
+  {
+    $_SESSION['message'] = "File saved successfully";
+    header("Location:services.php");
+    exit(0);
+  } else
+  {
+    $_SESSION['message'] = "File not saved";
+  }
+
+}
+if(isset($_POST['ab_upload']))
+{
+  $title = mysqli_real_escape_string($con, $_POST['title']);
+  $description = mysqli_real_escape_string($con, $_POST['description']); 
+  $sql = "INSERT INTO aboutus (title, description) VALUES ('$title', '$description')";
+  $query = mysqli_query($con, $sql);
+  if($query)
+  {
+    $_SESSION['message'] = "File saved successfully";
+    header("Location:aboutus.php");
+    exit(0);
+  } else
+  {
+    $_SESSION['message'] = "File not saved";
+  }
+
+}
+if(isset($_POST['ab_edit']))
+{
+  $row_id = mysqli_real_escape_string($con, $_POST['id']);
+  $title = mysqli_real_escape_string($con, $_POST['title']);
+  $description = mysqli_real_escape_string($con, $_POST['description']); 
+  $sql = "UPDATE aboutus SET title = '$title', description = '$description' WHERE id = $row_id";
+  $query = mysqli_query($con, $sql);
+  if($query)
+  {
+    $_SESSION['message'] = "File saved successfully";
+    header("Location:aboutus.php");
+    exit(0);
+  } else
+  {
+    $_SESSION['message'] = "File not saved";
+  }
+
+}
+if(isset($_POST['course_upload']))
+{
+  $title = mysqli_real_escape_string($con, $_POST['title']);
+  $description = mysqli_real_escape_string($con, $_POST['description']); 
+  $sql = "INSERT INTO courses1 (title, description) VALUES ('$title', '$description')";
+  $query = mysqli_query($con, $sql);
+  if($query)
+  {
+    $_SESSION['message'] = "File saved successfully";
+    header("Location:courses1.php");
+    exit(0);
+  } else
+  {
+    $_SESSION['message'] = "File not saved";
+  }
+
+}
+if(isset($_POST['course_edit']))
+{
+  $row_id = mysqli_real_escape_string($con, $_POST['id']);
+  $title = mysqli_real_escape_string($con, $_POST['title']);
+  $description = mysqli_real_escape_string($con, $_POST['description']); 
+  $sql = "UPDATE courses1 SET title = '$title', description = '$description' WHERE id = $row_id";
+  $query = mysqli_query($con, $sql);
+  if($query)
+  {
+    $_SESSION['message'] = "File saved successfully";
+    header("Location:courses1.php");
+    exit(0);
+  } else
+  {
+    $_SESSION['message'] = "File not saved";
+  }
+
+}
+if(isset($_POST['blog_upload']))
+{
+  $title = mysqli_real_escape_string($con, $_POST['title']);
+  $description = mysqli_real_escape_string($con, $_POST['description']); 
+  $filename = $_FILES['image']['name'];
+  $filetemp = $_FILES['image']['tmp_name'];
+  $folder = 'img/'. $filename;
+  $sql = "INSERT INTO blog (title, description, file) VALUES ('$title', '$description', '$filename')";
+  $query = mysqli_query($con, $sql);
+  if(move_uploaded_file($filetemp, $folder))
+  {
+    $_SESSION['message'] = "File saved successfully";
+    header("Location:blog.php");
+    exit(0);
+  } else
+  {
+    $_SESSION['message'] = "File not saved";
+  }
+
+}
+if(isset($_POST['blog_edit']))
+{
+  $row_id = mysqli_real_escape_string($con, $_POST['id']);
+  $title = mysqli_real_escape_string($con, $_POST['title']);
+  $description = mysqli_real_escape_string($con, $_POST['description']); 
+  $filename = $_FILES['image']['name'];
+  $filetemp = $_FILES['image']['tmp_name'];
+  $folder = 'img/' . $filename;
+  $sql = "UPDATE blog SET title = '$title', description = '$description', file = '$filename' WHERE id = $row_id";
+  $query = mysqli_query($con, $sql);
+  if(move_uploaded_file($filetemp, $folder))
+  {
+    $_SESSION['message'] = "File saved successfully";
+    header("Location:blog.php");
+    exit(0);
+  } else
+  {
+    $_SESSION['message'] = "File not saved";
+  }
+
+}
 ?>

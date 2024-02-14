@@ -213,6 +213,18 @@ include 'code.php';
       {
         display:block;
       }
+      .delete
+      {
+        position: absolute;
+        z-index: 1;
+        border: 1px solid black;
+        border-radius: 3px;
+        background-color: white;
+        max-width: 25%;
+        margin-left: 35%;
+        top:300px;
+        display: none;
+      }
     </style>
   </head>
   <body>
@@ -241,7 +253,7 @@ include 'code.php';
         <div id="wider" class="column bg-light">
             <div class="container">
                 <div class="row">
-                <p><span id="dash">Welcome, <?php require 'message.php';?></span><span class="float-end"> </span><span class="float-end"><a href="index.php">logout</a></span></p>
+                <p><span id="dash">Welcome, <?php require 'message.php';?></span><span class="float-end d-inline"> </span><span class="float-end"><a href="index.php">logout</a></span></p>
                 </div>    
                 <hr>
                 <?php
@@ -257,6 +269,8 @@ if(isset($_SESSION['message'])){
 unset($_SESSION['message']); 
 };  
 ?>
+                
+
                 <div class="row justify-content-center">
                 <div class="col-4">
                 <form action="register.php" method="POST">
@@ -287,7 +301,7 @@ unset($_SESSION['message']);
                 <input type="text" name="provincer" value="<?php echo htmlspecialchars($province);?>" class="form-control">
                 <div class="text-danger"><?php echo $errors['provincer'];?></div>
             </div>
-            <div class="my-1">
+            <div class="my-1"staut>
                 <label for="">District:</label> <br>
                 <input type="text" name="districtr" value="<?php echo htmlspecialchars($district);?>" class="form-control">
                 <div class="text-danger"><?php echo $errors['districtr'];?></div>
@@ -305,6 +319,7 @@ unset($_SESSION['message']);
             <label class="form-check-label" for="female">Female</label>
             <div class="text-danger"><?php echo $errors['genderr'];?></div>
             </div>   
+            <input type="hidden" value="Pending" name="status">
             <input type="submit" value="Register" name="signinr" class="btn btn-primary my-1">
         </form>
                 </div>

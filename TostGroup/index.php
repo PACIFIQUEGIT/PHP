@@ -98,7 +98,7 @@ include 'includes/header.php';
             </div>       
             <input type="submit" value="Register" name="signin" class="btn btn-primary my-1">
         </form>
-        <p>Already registered? <button type="button" onclick="login()" class="nav-link d-inline">Login</button></p>
+        <p>Already registered? <button onclick="login()" class="nav-link d-inline text-primary border-0">Login</button></p>
         </div>
     </div>
     <div class="card login" id="login">
@@ -116,7 +116,7 @@ include 'includes/header.php';
             </div>
             <input type="submit" value="Log in" name="login" class="btn btn-primary my-3">
         </form>
-        <p>Not yet registered? <button type="button" onclick="signin()" class="nav-link d-inline">Register</button></p>
+        <p>Not yet registered? <button onclick="signin()" class="nav-link d-inline text-primary border-0">Register</button></p>
     </div>
     </div>
   </div>

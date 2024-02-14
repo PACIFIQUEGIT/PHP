@@ -42,7 +42,7 @@
         background-color: white;
         width: 400px;
         margin-left: 35%;
-        top:59px;
+        top: 49px;
         display: none;
         <?php
         if(isset($_SESSION['prevent1'])){
