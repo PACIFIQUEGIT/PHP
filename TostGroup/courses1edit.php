@@ -36,6 +36,11 @@ include('blankpage.php');
                                     <textarea class="form-control" value="" name="description" id="" cols="30" rows="10"><?php echo $row['description'];?></textarea>
                                 </td>
                             </tr>
+                            <tr>
+                                <td>
+                                    <input class="form-control" value="<?php echo $row['file']; ?>" type="file" name="image">
+                                </td>
+                            </tr>
                         </tbody>
                         </div>
                         </table>

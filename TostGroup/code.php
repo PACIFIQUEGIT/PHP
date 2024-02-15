@@ -216,7 +216,7 @@ if(isset($_POST['adm_edit']))
   $filename = $_FILES['image']['name'];
   $filetemp = $_FILES['image']['tmp_name'];
   $folder = 'img/' . $filename;
-  $sql = "UPDATE images SET header = '$header', paragraph = '$paragraph' file = '$filename' WHERE id = $row_id";
+  $sql = "UPDATE images SET header = '$header', paragraph = '$paragraph', file = '$filename' WHERE id = $row_id";
   $query = mysqli_query($con, $sql);
   if(move_uploaded_file($filetemp, $folder))
   {
@@ -268,9 +268,12 @@ if(isset($_POST['ab_upload']))
 {
   $title = mysqli_real_escape_string($con, $_POST['title']);
   $description = mysqli_real_escape_string($con, $_POST['description']); 
-  $sql = "INSERT INTO aboutus (title, description) VALUES ('$title', '$description')";
+  $filename = $_FILES['image']['name'];
+  $filetemp = $_FILES['image']['tmp_name'];
+  $folder = 'img/'. $filename;
+  $sql = "INSERT INTO aboutus (title, description, file) VALUES ('$title', '$description', '$filename')";
   $query = mysqli_query($con, $sql);
-  if($query)
+  if(move_uploaded_file($filetemp, $folder))
   {
     $_SESSION['message'] = "File saved successfully";
     header("Location:aboutus.php");
@@ -286,9 +289,12 @@ if(isset($_POST['ab_edit']))
   $row_id = mysqli_real_escape_string($con, $_POST['id']);
   $title = mysqli_real_escape_string($con, $_POST['title']);
   $description = mysqli_real_escape_string($con, $_POST['description']); 
-  $sql = "UPDATE aboutus SET title = '$title', description = '$description' WHERE id = $row_id";
+  $filename = $_FILES['image']['name'];
+  $filetemp = $_FILES['image']['tmp_name'];
+  $folder = 'img/' . $filename;
+  $sql = "UPDATE aboutus SET title = '$title', description = '$description', file = '$filename' WHERE id = $row_id";
   $query = mysqli_query($con, $sql);
-  if($query)
+  if(move_uploaded_file($filetemp, $folder))
   {
     $_SESSION['message'] = "File saved successfully";
     header("Location:aboutus.php");
@@ -303,9 +309,12 @@ if(isset($_POST['course_upload']))
 {
   $title = mysqli_real_escape_string($con, $_POST['title']);
   $description = mysqli_real_escape_string($con, $_POST['description']); 
-  $sql = "INSERT INTO courses1 (title, description) VALUES ('$title', '$description')";
+  $filename = $_FILES['image']['name'];
+  $filetemp = $_FILES['image']['tmp_name'];
+  $folder = 'img/'. $filename;
+  $sql = "INSERT INTO courses1 (title, description, file) VALUES ('$title', '$description', '$filename')";
   $query = mysqli_query($con, $sql);
-  if($query)
+  if(move_uploaded_file($filetemp, $folder))
   {
     $_SESSION['message'] = "File saved successfully";
     header("Location:courses1.php");
@@ -321,9 +330,12 @@ if(isset($_POST['course_edit']))
   $row_id = mysqli_real_escape_string($con, $_POST['id']);
   $title = mysqli_real_escape_string($con, $_POST['title']);
   $description = mysqli_real_escape_string($con, $_POST['description']); 
-  $sql = "UPDATE courses1 SET title = '$title', description = '$description' WHERE id = $row_id";
+  $filename = $_FILES['image']['name'];
+  $filetemp = $_FILES['image']['tmp_name'];
+  $folder = 'img/' . $filename;
+  $sql = "UPDATE courses1 SET title = '$title', description = '$description', file = '$filename' WHERE id = $row_id";
   $query = mysqli_query($con, $sql);
-  if($query)
+  if(move_uploaded_file($filetemp, $folder))
   {
     $_SESSION['message'] = "File saved successfully";
     header("Location:courses1.php");

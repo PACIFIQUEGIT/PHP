@@ -1,7 +1,7 @@
 
 <footer class="bg-dark text-white">
-<div class="mx-5 p-5 d-flex justify-content-around">
-<div id="ftr">
+<div class="mx-5 p-5 row justify-content-around">
+<div  class="col-md-3">
 <h4>Quick Link</h4>  
 <a id="ftra" href=""><i class='bx bx-chevron-right'></i>About Us</a><br>
 <a id="ftra" href=""><i class='bx bx-chevron-right'></i>Contact Us</a><br>
@@ -9,7 +9,7 @@
 <a id="ftra" href=""><i class='bx bx-chevron-right'></i>Terms & Condition</a><br>
 <a id="ftra" href=""><i class='bx bx-chevron-right'></i>FAQs & Help</a><br>
 </div>
-<div id="ftr">
+<div  class="col-md-3">
 <h4>Contact</h4>
 <i class='bx bxs-location-plus' ></i> Giporoso, REMERA <br>
 <i class='bx bxs-phone-call'></i> +250 788 844 934 <br>
@@ -17,7 +17,7 @@
 <i class='bx bx-globe'></i> tostgroup.com <br>
 <i class='bx bxl-twitter' ></i><i class='bx bxl-facebook-circle' ></i><i class='bx bxl-instagram-alt' ></i><i class='bx bxl-whatsapp' ></i><i class='bx bxl-linkedin' ></i><i class='bx bxl-youtube' ></i>
 </div>
-<div id="ftr">
+<div  class="col-md-3">
   <h4>Gallery</h4>
   <div class="row d-flex">
     <div class="col mx-1 py-1 text-center bg-primary"><img width="45px" height="35px" src="img/course-1.jpg" alt=""></div>
@@ -30,7 +30,7 @@
     <div class="col mx-1 py-1 text-center bg-primary"><img width="45px" height="35px" src="img/course-1.jpg" alt=""></div>
   </div>
 </div>
-<div id="ftr">
+<div  class="col-md-3">
   <h4>Newsletter</h4>
   Dolor amet sit justo amet elitr <br>
   clita ipsum elitr est.

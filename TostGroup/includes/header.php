@@ -1,3 +1,6 @@
+<?php
+require('code.php');
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -8,6 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <title>Hello, world!</title>
     <style>
@@ -22,7 +26,8 @@
         border-radius: 3px;
         background-color: white;
         width: 400px;
-        margin-left: 35%;
+        align-items: center;
+        justify-content: center;
         top:150px;
         display: none;
         <?php
@@ -41,8 +46,9 @@
         border-radius: 3px;
         background-color: white;
         width: 400px;
-        margin-left: 35%;
-        top: 49px;
+        align-items: center;
+        justify-content: center;
+        top: 53px;
         display: none;
         <?php
         if(isset($_SESSION['prevent1'])){
@@ -210,7 +216,7 @@
       {
         position: relative;
         height:230px;
-        background-image:url('img/html.jpeg');
+        
         background-repeat: no-repeat;
         background-size: 473px 230px;
       }
@@ -251,7 +257,7 @@
         background-size: 290px 230px;
         transition:.5s;
       }
-      #bgcs1:hover, #bgcs2:hover
+      #bgcs1:hover
       {
         background-size: 480px 240px;
         transition:.5s;
@@ -260,7 +266,7 @@
       {
         position: relative;
         height:230px;
-        background-image:url('img/course-2.jpg');
+        
         background-repeat: no-repeat;
         background-size: 285px 230px;
       }
@@ -348,24 +354,41 @@
     </style>
   </head>
   <body>
-  <nav class="navbar navbar-expand-lg justify-content-center fixed-top bg-white py-4">      
-        <a href="index.php" class="navbar-brand">TOST GROUP SD</a>
-        <ol class="nav">
-        <li class="nav-item"><a href="index.php" class="nav-link btn btn-white">Home</a></li> 
-        <li class="nav-item"><a href="about.php" class="nav-link btn btn-white">About</a></li>
-        <li class="nav-item"><a href="courses.php" class="nav-link btn btn-white">Courses</a></li>
+  
+  
+  <nav class="navbar navbar-expand-md justify-content-center fixed-top bg-white">
+  <div class="container-fluid">
+    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <i class='fa fa-align-justify'></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="index.php">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.php">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="courses.php">Courses</a>
+        </li>
         <li class="nav-item dropdown">
-          <a href="#" data-bs-toggle="dropdown" class="nav-link dropdown-toggle btn btn-white">Pages</a>
-          <ul class="dropdown-menu">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Pages
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
           <li><a id="a" class="dropdown-item" href="ourteam.php">Our Team</a></li>
           <li><a id="a" class="dropdown-item" href="testimonial.php">Testimonial</a></li>
           </ul>
-        </li>  
-        <li class="nav-item"><a href="contact.php" class="nav-link btn btn-white">Contact</a></li>    
-        </ol>
-        <ul class="nav">
-            <li class="nav-item"><button onclick="login()" type="button" class="nav-link btn btn-white">Log in</button></li>
-            <li class="nav-item"><button onclick="signin()" type="button" class="nav-link btn btn-white">Register</button></li>
-        </ul>
-  </nav>
-  
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.php" tabindex="-1" aria-disabled="true">Contact</a>
+        </li>
+      </ul>
+      <span class="d-flex">
+      <button onclick="login()" type="button" class="nav-link btn btn-white">Log in</button>
+      <button onclick="signin()" type="button" class="nav-link btn btn-white">Register</button>
+    </span>
+    </div>
+  </div>
+</nav>

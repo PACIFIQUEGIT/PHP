@@ -1,6 +1,3 @@
-<?php
-require 'code.php';
-?>
 
 <?php
 include 'includes/header.php';

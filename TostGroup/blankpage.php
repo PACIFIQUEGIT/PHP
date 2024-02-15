@@ -86,14 +86,7 @@ include 'code.php';
         background-color:white;
         z-index: 1;
       }
-      #bgcs1
-      {
-        position: relative;
-        height:230px;
-        background-image:url('img/html.jpeg');
-        background-repeat: no-repeat;
-        background-size: 473px 230px;
-      }
+      
       #bgcs2
       {
         position: relative;

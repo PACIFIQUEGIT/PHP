@@ -38,7 +38,7 @@ include('blankpage.php');
                             </tr>
                             <tr>
                                 <td>
-                                    <input class="form-control" value="" type="file" name="image">
+                                    <input class="form-control" value="<?php echo $row['file']; ?>" type="file" name="image">
                                 </td>
                             </tr>
                         </tbody>
