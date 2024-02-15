@@ -4,20 +4,27 @@ include 'includes/header.php';
 
   <div id="demo" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
-<?php 
+
+    <div class="carousel-item active">
+    <?php 
                         $sql = "SELECT * FROM images";
                         $query = mysqli_query($con, $sql);
                         while($row = mysqli_fetch_array($query))
                         { ;?>
-    <div class="carousel-item active">
       <img id="im" src="img/<?php echo $row['file']; ?>" alt="New York" class="d-block" style="width:100%; height: 590px">
+        <?php } ;?>
               <div class="card-img-overlay text-white">
+              <?php 
+                        $sql = "SELECT * FROM images";
+                        $query = mysqli_query($con, $sql);
+                        while($row = mysqli_fetch_array($query))
+                        { ;?>
                   <h1 class="card-title"><?php echo $row['header']; ?></h1>
                   <p class="card-text"><?php echo $row['paragraph']; ?></p>
                   <a href="#" class="btn btn-primary">Read More</a>
+                  <?php } ;?>
               </div>  
     </div> 
-<?php } ;?>
     <div class="carousel-indicators">
     <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
     <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
