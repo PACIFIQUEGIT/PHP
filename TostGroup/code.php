@@ -387,4 +387,88 @@ if(isset($_POST['blog_edit']))
   }
 
 }
+if(isset($_POST['instructors_upload']))
+{
+  $title = mysqli_real_escape_string($con, $_POST['title']);
+  $description = mysqli_real_escape_string($con, $_POST['description']); 
+  $filename = $_FILES['image']['name'];
+  $filetemp = $_FILES['image']['tmp_name'];
+  $folder = 'img/'. $filename;
+  $sql = "INSERT INTO instructors (title, description, file) VALUES ('$title', '$description', '$filename')";
+  $query = mysqli_query($con, $sql);
+  if(move_uploaded_file($filetemp, $folder))
+  {
+    $_SESSION['message'] = "File saved successfully";
+    header("Location:instructors.php");
+    exit(0);
+  } else
+  {
+    $_SESSION['message'] = "File not saved";
+  }
+
+}
+if(isset($_POST['instructors_edit']))
+{
+  $row_id = mysqli_real_escape_string($con, $_POST['id']);
+  $title = mysqli_real_escape_string($con, $_POST['title']);
+  $description = mysqli_real_escape_string($con, $_POST['description']); 
+  $filename = $_FILES['image']['name'];
+  $filetemp = $_FILES['image']['tmp_name'];
+  $folder = 'img/' . $filename;
+  $sql = "UPDATE instructors SET title = '$title', description = '$description', file = '$filename' WHERE id = $row_id";
+  $query = mysqli_query($con, $sql);
+  if(move_uploaded_file($filetemp, $folder))
+  {
+    $_SESSION['message'] = "File saved successfully";
+    header("Location:instructors.php");
+    exit(0);
+  } else
+  {
+    $_SESSION['message'] = "File not saved";
+  }
+
+}
+if(isset($_POST['students_upload']))
+{
+  $title = mysqli_real_escape_string($con, $_POST['title']);
+  $description = mysqli_real_escape_string($con, $_POST['description']); 
+  $testimony = mysqli_real_escape_string($con, $_POST['testimony']);
+  $filename = $_FILES['image']['name'];
+  $filetemp = $_FILES['image']['tmp_name'];
+  $folder = 'img/'. $filename;
+  $sql = "INSERT INTO students_t (title, description, testimony, file) VALUES ('$title', '$description', '$testimony', '$filename')";
+  $query = mysqli_query($con, $sql);
+  if(move_uploaded_file($filetemp, $folder))
+  {
+    $_SESSION['message'] = "File saved successfully";
+    header("Location:students.php");
+    exit(0);
+  } else
+  {
+    $_SESSION['message'] = "File not saved";
+  }
+
+}
+if(isset($_POST['students_edit']))
+{
+  $row_id = mysqli_real_escape_string($con, $_POST['id']);
+  $title = mysqli_real_escape_string($con, $_POST['title']);
+  $testimony = mysqli_real_escape_string($con, $_POST['testimony']);
+  $description = mysqli_real_escape_string($con, $_POST['description']); 
+  $filename = $_FILES['image']['name'];
+  $filetemp = $_FILES['image']['tmp_name'];
+  $folder = 'img/' . $filename;
+  $sql = "UPDATE students_t SET title = '$title', description = '$description', testimony = '$testimony', file = '$filename' WHERE id = $row_id";
+  $query = mysqli_query($con, $sql);
+  if(move_uploaded_file($filetemp, $folder))
+  {
+    $_SESSION['message'] = "File saved successfully";
+    header("Location:students.php");
+    exit(0);
+  } else
+  {
+    $_SESSION['message'] = "File not saved";
+  }
+
+}
 ?>

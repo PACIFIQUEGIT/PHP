@@ -3,35 +3,26 @@ include 'includes/header.php';
 ?>
 
   <div id="demo" class="carousel slide" data-bs-ride="carousel">
-
-  <!-- Indicators/dots -->
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
     <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
     <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
   </div>
-  <div class="carousel-inner">
-   
-
   <?php 
                         $sql = "SELECT * FROM images";
                         $query = mysqli_query($con, $sql);
                         while($row = mysqli_fetch_array($query))
-                        { ?> 
-
+                        { ?>
+  <div class="carousel-inner">
     <div class="carousel-item active">
       <img id="im" src="img/<?php echo $row['file']; ?>" alt="New York" class="d-block" style="width:100%; height: 590px">
       <div class="card-img-overlay text-white">
                   <h1 class="card-title"><?php echo $row['header']; ?></h1>
                   <p class="card-text"><?php echo $row['paragraph']; ?></p>
                   <a href="#" class="btn btn-primary">Read More</a>
-              </div>
-    </div>
-
-    <?php } ?>
-  </div>
-  
-  <!-- Left and right controls/icons -->
+              </div>   
+    </div> 
+  </div><?php } ?>
   <button id="b1" class="carousel-control-prev rounded-circle bg-primary " type="button" data-bs-target="#demo" data-bs-slide="prev">
     <span class="carousel-control-prev-icon"></span>
   </button>
@@ -152,10 +143,15 @@ include 'includes/header.php';
   <p id="cbl">INSTRUCTORS</p>
   <h1>Expert Instructors</h1>
   <div class="row mt-5 justify-content-around">
+  <?php 
+                        $sql = "SELECT * FROM instructors";
+                        $query = mysqli_query($con, $sql);
+                        while($row = mysqli_fetch_array($query))
+                        { ;?>
     <div class="col-md-3">
        <div class="card">
          <div class="card-header p-0">
-           <div id="bgcs3d">
+           <div style=" background-image:url('img/<?php echo $row['file']; ?>');" id="bgcs3d">
              <div id="btnga" class="btn-group px-1">
              <a href="" ><i class='bx bxl-facebook-square' ></i></a>
              <a href="" ><i class='bx bxl-twitter' ></i></a>
@@ -164,99 +160,38 @@ include 'includes/header.php';
            </div>
          </div>
          <div class="card-body">
-         <p><b>Instructor Name</b> <br>
-               Designation</p>
+         <p><b><?php echo $row['title']; ?></b> <br>
+         <?php echo $row['description']; ?></p>
          </div>
        </div>
     </div>
-    <div class="col-md-3">
-       <div class="card">
-         <div class="card-header p-0">
-           <div id="bgcs3d">
-             <div id="btnga" class="btn-group px-1">
-             <a href="" ><i class='bx bxl-facebook-square' ></i></a>
-             <a href="" ><i class='bx bxl-twitter' ></i></a>
-             <a href="" ><i class='bx bxl-instagram-alt' ></i></a>
-             </div>
-           </div>
-         </div>
-         <div class="card-body">
-         <p><b>Instructor Name</b> <br>
-               Designation</p>
-         </div>
-       </div>
-    </div>
-    <div class="col-md-3">
-       <div class="card">
-         <div class="card-header p-0">
-           <div id="bgcs3d">
-             <div id="btnga" class="btn-group px-1">
-             <a href="" ><i class='bx bxl-facebook-square' ></i></a>
-             <a href="" ><i class='bx bxl-twitter' ></i></a>
-             <a href="" ><i class='bx bxl-instagram-alt' ></i></a>
-             </div>
-           </div>
-         </div>
-         <div class="card-body">
-         <p><b>Instructor Name</b> <br>
-               Designation</p>
-         </div>
-       </div>
-    </div>
+    <?php  } ; ?>
   </div>  
 </div>
   <div class="container text-center my-5">
     <p id="cbl">TESTIMONIAL</p>
   <h1>Our Students Say!</h1>
   <div class="row mt-5 justify-content-between">
+  <?php 
+                        $sql = "SELECT * FROM students_t";
+                        $query = mysqli_query($con, $sql);
+                        while($row = mysqli_fetch_array($query))
+                        { ;?>
         <div class="col-md-3">
            <div class="justify-content-center row">
              <div style="width: 150px; height: 150px;;" class="border rounded-circle justify-content-around row p-1">
-             <img style="width: 140px; height: 140px;;" class="card-img-top  rounded-circle" src="img/11.jpg" alt="image">
+             <img style="width: 140px; height: 140px;;" class="card-img-top  rounded-circle" src="img/<?php echo $row['file']; ?>" alt="image">
              </div>
              <div id="">
-             <p><b>Client Name</b> <br>
-                   Profession</p>
+             <p><b><?php echo $row['title']; ?></b> <br>
+             <?php echo $row['description']; ?></p>
              </div>
              <div class="b">
-             <p>Tempor erat elitr rebum at clita. Diam dolor 
-                diam ipsum sit diam amet diam et eos. 
-                Clita erat ipsum et lorem et sit.</p>
+             <p><?php echo $row['testimony']; ?></p>
              </div>
             </div>
         </div>
-        <div class="col-md-3">
-           <div class="justify-content-center row">
-             <div style="width: 150px; height: 150px;;" class="border rounded-circle justify-content-around row p-1">
-             <img style="width: 140px; height: 140px;;" class="card-img-top  rounded-circle" src="img/11.jpg" alt="image">
-             </div>
-             <div id="">
-             <p><b>Client Name</b> <br>
-                   Profession</p>
-             </div>
-             <div class="b">
-             <p>Tempor erat elitr rebum at clita. Diam dolor 
-                diam ipsum sit diam amet diam et eos. 
-                Clita erat ipsum et lorem et sit.</p>
-             </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-           <div class="justify-content-center row">
-             <div style="width: 150px; height: 150px;;" class="border rounded-circle justify-content-around row p-1">
-             <img style="width: 140px; height: 140px;;" class="card-img-top  rounded-circle" src="img/11.jpg" alt="image">
-             </div>
-             <div id="">
-             <p><b>Client Name</b> <br>
-                   Profession</p>
-             </div>
-             <div class="b">
-             <p>Tempor erat elitr rebum at clita. Diam dolor 
-                diam ipsum sit diam amet diam et eos. 
-                Clita erat ipsum et lorem et sit.</p>
-             </div>
-            </div>
-        </div>
+        <?php  } ; ?>
   </div>  
 </div>
 <div class="container-fluid bg-light justify-content-center ">

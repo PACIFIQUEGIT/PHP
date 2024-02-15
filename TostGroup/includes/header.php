@@ -268,7 +268,7 @@ require('code.php');
         height:230px;
         
         background-repeat: no-repeat;
-        background-size: 285px 230px;
+        background-size: 100% 230px;
       }
       #bgcs3b
       {
@@ -288,7 +288,7 @@ require('code.php');
       }
       #bgcs3a:hover, #bgcs3b:hover, #bgcs3c:hover, #bgcs3d:hover
       {
-        background-size: 290px 235px;
+        background-size: 101% 240px;
         transition:1s;
       }
       #btng
@@ -307,9 +307,9 @@ require('code.php');
       {
         position: relative;
         height:230px;
-        background-image:url('img/team-2.jpg');
+       
         background-repeat: no-repeat;
-        background-size: 285px 230px;
+        background-size: 100% 230px;
       }
       .b
       {

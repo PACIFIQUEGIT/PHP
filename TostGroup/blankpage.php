@@ -670,6 +670,8 @@ include 'code.php';
                     <p><a style="color:white" href="aboutus.php">About Us</a> <span class="float-end"><i class='bx bx-chevron-right'></i></span> </p>
                     <p><a style="color:white" href="courses1.php">Courses</a> <span class="float-end"><i class='bx bx-chevron-right'></i></span> </p>
                     <p><a style="color:white" href="blog.php">Blog</a> <span class="float-end"><i class='bx bx-chevron-right'></i></span> </p>
+                    <p><a style="color:white" href="instructors.php">Instructors</a> <span class="float-end"><i class='bx bx-chevron-right'></i></span> </p>
+                    <p><a style="color:white" href="students.php">Students</a> <span class="float-end"><i class='bx bx-chevron-right'></i></span> </p>
                 </div>
                 <div class="row text-white border-top py-3">
                     <p><b>ADDONS</b></p>

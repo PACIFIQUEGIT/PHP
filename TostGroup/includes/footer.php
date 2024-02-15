@@ -46,11 +46,11 @@
 <div class="container"><hr></div>
 <div class="container">
   <div class="row">
-    <div class="col-6">
+    <div class="col-md-6">
       <p>© Tost Group Software Development Trainings, All Right Reserved. Designed By Pacifique</p>
       <p>Distributed By ...</p>
     </div>
-    <div class="col-6">
+    <div class="col-md-6">
   <div class="nav justify-content-end">
   <li class="nav-item">
   <a class="nav-link text-white border-end border-secondary" href="#">Home</a>
