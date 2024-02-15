@@ -3,35 +3,39 @@ include 'includes/header.php';
 ?>
 
   <div id="demo" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
-  </div>
-  <?php 
+  <div class="carousel-inner">
+<?php 
                         $sql = "SELECT * FROM images";
                         $query = mysqli_query($con, $sql);
                         while($row = mysqli_fetch_array($query))
-                        { ?>
-  <div class="carousel-inner">
+                        { ;?>
     <div class="carousel-item active">
       <img id="im" src="img/<?php echo $row['file']; ?>" alt="New York" class="d-block" style="width:100%; height: 590px">
-      <div class="card-img-overlay text-white">
+              <div class="card-img-overlay text-white">
                   <h1 class="card-title"><?php echo $row['header']; ?></h1>
                   <p class="card-text"><?php echo $row['paragraph']; ?></p>
                   <a href="#" class="btn btn-primary">Read More</a>
-              </div>   
+              </div>  
     </div> 
-  </div><?php } ?>
-  <button id="b1" class="carousel-control-prev rounded-circle bg-primary " type="button" data-bs-target="#demo" data-bs-slide="prev">
+<?php } ;?>
+    <div class="carousel-indicators">
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+    </div>
+
+    <button id="b1" class="carousel-control-prev rounded-circle bg-primary " type="button" data-bs-target="#demo" data-bs-slide="prev">
     <span class="carousel-control-prev-icon"></span>
-  </button>
-  <button id="b2" class="carousel-control-next rounded-circle bg-primary" type="button" data-bs-target="#demo" data-bs-slide="next">
+    </button>
+    <button id="b2" class="carousel-control-next rounded-circle bg-primary" type="button" data-bs-target="#demo" data-bs-slide="next">
     <span class="carousel-control-next-icon"></span>
-  </button>
+    </button>
+
+
+  </div>
+  
 </div>
 
-  
   <div class="container-fluid my-5 pt-3">
   <div class="justify-content-around row mt-5">
   <?php 
