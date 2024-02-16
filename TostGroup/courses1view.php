@@ -14,6 +14,7 @@ include('blankpage.php');
                                 <th>Id</th>
                                 <th>Title</th>
                                 <th>Description</th>
+                                <th>Image</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -29,6 +30,7 @@ include('blankpage.php');
                                 <td><?php echo $row['id']; ?></td>
                                 <td><?php echo $row['title']; ?></td>
                                 <td><?php echo $row['description']; ?></td>
+                                <td><img id="im" src="img/<?php echo $row['file']; ?>" alt="Los Angeles" class="d-block" style="width:100px; height: 100px"></td>
                                 </tr>
                             <?php  }} ; ?>
                             
