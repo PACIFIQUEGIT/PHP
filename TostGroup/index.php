@@ -3,29 +3,24 @@ include 'includes/header.php';
 ?>
 
   <div id="demo" class="carousel slide" data-bs-ride="carousel">
+  <?php 
+       $sql = "SELECT * FROM images";
+       $query = mysqli_query($con, $sql);
+       while($row = mysqli_fetch_array($query))
+       {; 
+  ?>
   <div class="carousel-inner">
-
     <div class="carousel-item active">
-    <?php 
-                        $sql = "SELECT * FROM images";
-                        $query = mysqli_query($con, $sql);
-                        while($row = mysqli_fetch_array($query))
-                        { ;?>
       <img id="im" src="img/<?php echo $row['file']; ?>" alt="New York" class="d-block" style="width:100%; height: 590px">
-        <?php } ;?>
-              <div class="card-img-overlay text-white">
-              <?php 
-                        $sql = "SELECT * FROM images";
-                        $query = mysqli_query($con, $sql);
-                        while($row = mysqli_fetch_array($query))
-                        { ;?>
+        <div class="card-img-overlay text-white">
                   <h1 class="card-title"><?php echo $row['header']; ?></h1>
                   <p class="card-text"><?php echo $row['paragraph']; ?></p>
                   <a href="#" class="btn btn-primary">Read More</a>
-                  <?php } ;?>
-              </div>  
+        </div>  
     </div> 
-    <div class="carousel-indicators">
+  </div>
+  <?php } ;?>
+  <div class="carousel-indicators">
     <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
     <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
     <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
@@ -37,10 +32,6 @@ include 'includes/header.php';
     <button id="b2" class="carousel-control-next rounded-circle bg-primary" type="button" data-bs-target="#demo" data-bs-slide="next">
     <span class="carousel-control-next-icon"></span>
     </button>
-
-
-  </div>
-  
 </div>
 
   <div class="container-fluid my-5 pt-3">
