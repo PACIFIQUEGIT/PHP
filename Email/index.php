@@ -25,14 +25,14 @@ $message = $_POST['message'];
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
-    $mail->Username = 'phpemailsending@gmail.com';
+    $mail->Username = '';
     $mail->Password = '';
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port = 587;
     
 
-    $mail->setFrom('phpemailsending@gmail.com', 'Pacifique');
-    $mail->addAddress($email, 'PAC');
+    $mail->setFrom('', '');
+    $mail->addAddress($email);
 
     $mail->isHTML();
     $mail->Subject = $subject;
