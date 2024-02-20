@@ -26,7 +26,7 @@ $message = $_POST['message'];
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
     $mail->Username = 'phpemailsending@gmail.com';
-    $mail->Password = 'qttlqnemrdgphyji';
+    $mail->Password = '';
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port = 587;
     
