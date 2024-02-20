@@ -2,22 +2,31 @@
 include 'includes/header.php';
 ?>
 
-  <div id="demo" class="carousel slide" data-bs-ride="carousel">
+<div id="demo" class="carousel slide" data-bs-ride="carousel">
+  
   <div class="carousel-inner">
-<?php 
-                        $sql = "SELECT * FROM images";
-                        $query = mysqli_query($con, $sql);
-                        while($row = mysqli_fetch_array($query))
-                        { ;?>
-    <div class="carousel-item active">
+  <?php 
+       $sql = "SELECT * FROM images";
+       $query = mysqli_query($con, $sql);
+       $one = true;
+       while($row = mysqli_fetch_array($query))
+       {
+        $active_class = $one ? 'active' : ''; 
+  ?>
+    <div class="carousel-item <?php echo $active_class; ?>">
       <img id="im" src="img/<?php echo $row['file']; ?>" alt="New York" class="d-block" style="width:100%; height: 590px">
-              <div class="card-img-overlay text-white">
+        <div class="card-img-overlay text-white">
                   <h1 class="card-title"><?php echo $row['header']; ?></h1>
                   <p class="card-text"><?php echo $row['paragraph']; ?></p>
                   <a href="#" class="btn btn-primary">Read More</a>
-              </div>  
+        </div>  
     </div> 
-<?php } ;?>
+  <?php 
+       $one = false;
+       };
+  ?>
+  </div>
+
     <div class="carousel-indicators">
     <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
     <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
@@ -30,10 +39,6 @@ include 'includes/header.php';
     <button id="b2" class="carousel-control-next rounded-circle bg-primary" type="button" data-bs-target="#demo" data-bs-slide="next">
     <span class="carousel-control-next-icon"></span>
     </button>
-
-
-  </div>
-  
 </div>
 
   <div class="container-fluid my-5 pt-3">
