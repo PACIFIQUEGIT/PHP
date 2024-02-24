@@ -1,0 +1,3 @@
+require('bootstrap');
+
+// Your other bootstrap related code...
