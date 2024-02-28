@@ -176,8 +176,8 @@
   @foreach($best1 as $item)
     <div class="col-md-2">
       <div class="row">
-      <div class="text-center col py-4">
-      <img src="{{ asset('img/'.$item->image) }}" alt="New York" class="m-4 rounded-3" width="270px" height="180px">
+      <div class="text-center col-md py-4 px-0">
+      <img src="{{ asset('img/'.$item->image) }}" alt="New York" class=" mx-0 rounded-3" width="270px" height="180px">
    
       <h5>{{$item->name}}</h5>
       <span style="font-size: 10px;">
