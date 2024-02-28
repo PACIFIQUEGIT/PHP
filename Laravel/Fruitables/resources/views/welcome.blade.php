@@ -155,7 +155,7 @@
     </div>
     <div id="dib1"class="text-center col">
       <h5>{{$item->name}}</h5>
-      <span style="font-size: 10px;" class="text-danger">
+      <span style="font-size: 10px;">
             <span style="font-size: 20px;" class='bx bxs-star text-success'></span>
             <span style="font-size: 20px;" class='bx bxs-star text-success'></span>
             <span style="font-size: 20px;" class='bx bxs-star text-success'></span>
@@ -180,7 +180,7 @@
       <img src="{{ asset('img/'.$item->image) }}" alt="New York" class="m-4 rounded-3" width="270px" height="180px">
    
       <h5>{{$item->name}}</h5>
-      <span style="font-size: 10px;" class="text-danger">
+      <span style="font-size: 10px;">
             <span style="font-size: 20px;" class='bx bxs-star text-success'></span>
             <span style="font-size: 20px;" class='bx bxs-star text-success'></span>
             <span style="font-size: 20px;" class='bx bxs-star text-success'></span>
@@ -250,7 +250,7 @@
   </div>
   <div class="col">
   <form action="">
-    <div class="form-floating d-flex bg-white rounded-pill ">
+    <div class="form-floating d-flex bg-white rounded-pill">
     <input type="text" class="form-control border-0 text-secondary rounded-pill" id="email" name="email" placeholder="Your email">
     <label for="email" class="text-secondary">Your Email</label>
     <button type="submit" class="btn btn-success rounded-pill">Subscribe Now</button>
