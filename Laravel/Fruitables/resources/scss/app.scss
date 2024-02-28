@@ -1,0 +1,183 @@
+.b
+{
+    a{font-size: 25px;margin-left: 10px;}
+}
+.active
+{
+    color: green;
+}
+.dropdown:hover .dropdown-menu
+      {
+        display:block;
+      }
+      .column
+      {
+          float: left;
+      }
+      #aside
+      {
+          background-color: blue;
+          width: 20%;
+      }
+    #wider
+      {
+          width: 80%;
+          margin-top:10px;
+    }
+    #about {
+      position: relative;
+      margin-top:0px;
+      background-image: url('/public/img/images.png');
+      background-repeat: no-repeat;
+      background-size: 100%;
+      height: 500px;
+      border: 1px solid white;
+    }
+    
+    #about::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.8); /* Adjust the last value (0.5) for opacity */
+      z-index: 0; /* Ensure the overlay is behind other content */
+    }
+    
+    #about .row {
+      position: relative; /* Ensure child elements stack on top of the overlay */
+      z-index: 1; /* Ensure the content is above the overlay */
+    }
+    
+    .carousel-control-prev, .carousel-control-next
+    {
+      height: 50px;
+      width: 50px;
+      top: 180px;
+    }
+    .card-img-overlay
+    {
+      
+      align-self: center;
+    }
+    .card-text
+    {
+      font-size: 20px;
+      background-color: rgba(236, 181, 78, 0.8);
+      height: 40px;
+      width: 100px;
+    }
+    #dib
+      {
+        display: inline-block;
+        background-color: rgba(224, 224, 253, 0.8);
+      }
+      #cb
+      {
+        font-size: 50px;
+        color: blue;
+      }
+      #bgcs3a
+      {
+        position: relative;
+        height:230px;
+        background-repeat: no-repeat;
+        background-size: 100% 230px;
+      }
+      #bgcs3a:hover
+      {
+        background-size: 101% 240px;
+        transition:.5s;
+      }
+      #btng
+      {
+        position: relative;
+        margin-top: 10px;
+        margin-left: 10px;
+      }
+      .cart
+    {
+      text-decoration: none;
+      color: green;
+    }    
+    #bgcs3d
+    {
+      width: 400px;
+    }
+    #bgcs3dh
+    {
+      height: 280px;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      padding-top: 220px;
+      
+    }
+    #btnga
+    {
+      position: absolute;
+      background-color: white;
+      width: 150px;
+      height: 100px;
+      width: 45%;
+      margin: auto 100px;
+      z-index: 1;
+    }
+    #bgcs3db
+    {
+      height: 100px;
+    }
+    #btngv
+    {
+      margin-left: 147px;
+      margin-top: 10px;
+    }
+   #pd
+    {
+      position: relative;
+      
+    }
+    #p
+    {
+      position: absolute;
+      top: -390px;
+      left: 30px;
+    }
+    #dib1
+    {
+      
+      background-color: rgba(224, 224, 253, 0.8);
+    }
+    #dib2
+    {
+      
+      background-color: rgba(224, 224, 253, 0.8);
+    }
+    #dib3
+    {
+      
+      background-color: white;
+    }
+    #btn
+    {
+      position: fixed;
+      z-index: 5;
+      bottom: 20px;
+      right: 30px;
+      height: 40px;
+      width: 40px;
+      display: none;
+    }
+    .badge
+    {
+      font-size: 12px;
+      position: absolute;
+      right:119px;
+      top:22px;
+    }
+    .ok
+    {
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+    
