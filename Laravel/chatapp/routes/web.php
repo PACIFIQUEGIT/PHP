@@ -52,6 +52,10 @@ Route::group(['prefix' => 'chat', 'as' => 'chat.'], function() {
         Route::post('/{receiverid?}', [ChatController::class, 'store'])->name('store');
             });
 
+Route::get('event', function () {
+    \App\Events\OrderPlaced::dispatch(\App\Models\Order::find(1));
+});
+
 });
 
 require __DIR__.'/auth.php';

@@ -40,3 +40,9 @@ Broadcast::channel('groupchat.{roomid}', function ($user, $roomid) {
         return ['id' => $user->id, 'name' => $user->name];
     }
 });
+
+Broadcast::channel('messenger.{sender}.{receiver}', function ($user) {
+    if (true) {
+        return ['id' => $user->id, 'name' => $user->name];
+    }
+});
