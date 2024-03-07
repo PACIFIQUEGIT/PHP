@@ -115,11 +115,13 @@ if(isset($_POST['submit'])) {
     const email = document.getElementById('email').value;
 
     if (country !== "selected") {
-        var url = "http://127.0.0.1:8000/profile?countryid=" + country;
+        var url = "http://127.0.0.1:8000/profile?countryid=" + country + "&name=" + name + "&email=" + email;
+        
         // Append name and email as query parameters
-        url += "&name=" + name;
-        url += "&email=" + email;
+        //url += "&name=" + name;
+        //url += "&email=" + email;
         // Redirect to the new URL
+        
         window.location.href = url;
     } 
 }
