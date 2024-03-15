@@ -43,7 +43,7 @@ Route::get('pages/testimonial', [App\Http\Controllers\TestimonialController::cla
 Route::post('pages/testimonial', [App\Http\Controllers\TestimonialController::class, 'store'])->middleware('auth');
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('/')->middleware('auth');
-
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'handleAdmin'])->name('home')->middleware(['auth', 'admin']);
 
 
 Route::get('/admin', function () {
@@ -52,7 +52,7 @@ Route::get('/admin', function () {
 
 Auth::routes(['register' => false]);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'handleAdmin'])->name('home')->middleware(['auth', 'admin']);
+
 
 /*
 Auth::routes();
