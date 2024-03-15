@@ -15,9 +15,8 @@
         @vite(['resources/css/app.css', 'resources/scss/app.scss', 'resources/js/app.js'])
     </head>
     <body>
-    
     <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm fixed-top">
-            <div class="container">
+            <div class="container pos">
                 <a style="font-size:40px;" class="navbar-brand text-success" href="{{ url('/') }}">
                     <b>Fruitables</b>
                 </a>
@@ -26,7 +25,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav m-auto">
+                    <ul class="navbar-nav me-auto">
 
                     <li class="nav-item">
           <a class="nav-link" aria-current="page" href="#">Home</a>
@@ -59,11 +58,42 @@
                     <a href="#"><i class='bx bxs-shopping-bag text-success'><span class="badge rounded-pill text-dark bg-warning">3</span></i></a>
                     <a href="#"><i class='bx bxs-user text-success' ></i></a>
                 </div>
-
-        
-                    
                 </div>
             </div>
+            <ul class="navbar-nav m-auto">
+                        <!-- Authentication Links -->
+                        @guest
+                            @if (Route::has('login'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                </li>
+                            @endif
+
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif
+                        @else
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }}
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        @endguest
+                  </ul>
         </nav>
 
         @yield('content')
@@ -123,6 +153,5 @@
        }
        );
     </script>
-    
       </body>
 </html>

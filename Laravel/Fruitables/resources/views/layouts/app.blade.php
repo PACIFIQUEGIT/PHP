@@ -10,6 +10,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Fonts -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -89,59 +90,5 @@
 
     <script src="js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-        <script>
-      function signin() 
-      {
-        document.getElementById("signin").style.display="block";
-        document.getElementById("login").style.display="none";
-        document.getElementById("res").value="";
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-      }
-      function login() 
-      {
-        document.getElementById("login").style.display="block";
-        document.getElementById("signin").style.display="none";
-        document.getElementById("res").value="";
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-      }
-      function closee()
-      {
-        document.getElementById("login").style.display="none";
-        document.getElementById("signin").style.display="none";
-      }
-      
-      const button = document.getElementById('btn');
-      window.onscroll = function() {showbtn()};
-      function showbtn() 
-      {
-        const scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
-        if(scrollTop > 50)
-            {button.style.display = 'block';} 
-            else {button.style.display = 'none';}
-      }
-      function topbtn() 
-      {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-      }
-      document.addEventListener("DOMContentLoaded", function() 
-      {
-      var currentUrl = window.location.href;
-
-      var links = document.querySelectorAll('.nav-link');
-
-          links.forEach(function (link) 
-          {
-            if (link.href === currentUrl) 
-            {
-               link.classList.add('active');
-            }
-          }
-          );
-       }
-       );
-    </script>
 </body>
 </html>

@@ -16,7 +16,7 @@ use App\Models\Testimonial;
 
 class WelcomeController extends Controller
 {
-    public function index()
+        public function index()
     {
         // Fetch advantage
         $advantage = Advantage::all();

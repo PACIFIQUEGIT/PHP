@@ -42,7 +42,7 @@ Route::post('pages/number', [App\Http\Controllers\NumberController::class, 'stor
 Route::get('pages/testimonial', [App\Http\Controllers\TestimonialController::class, 'create'])->middleware('auth');
 Route::post('pages/testimonial', [App\Http\Controllers\TestimonialController::class, 'store'])->middleware('auth');
 
-Route::get('/', [App\Http\Controllers\WelcomeController::class, 'index']);
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('/')->middleware('auth');
 
 
 
@@ -52,4 +52,9 @@ Route::get('/admin', function () {
 
 Auth::routes(['register' => false]);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('auth');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'handleAdmin'])->name('home')->middleware(['auth', 'admin']);
+
+/*
+Auth::routes();
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('admin/home', 'HomeController@handleAdmin')->name('admin.route')->middleware('admin'); */

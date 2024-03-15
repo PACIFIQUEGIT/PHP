@@ -1,23 +1,17 @@
 <template>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">Example Component</div>
-
-                    <div class="card-body">
-                        I'm an example component.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+  <!-- Your component template -->
 </template>
 
 <script>
-    export default {
-        mounted() {
-            console.log('Component mounted.')
-        }
-    }
+// Import any necessary dependencies
+// For example, import Vue if you're using Vue.js in your component
+import Vue from 'vue';
+
+export default {
+  // Component options
+};
 </script>
+
+<style>
+/* Your component styles */
+</style>
