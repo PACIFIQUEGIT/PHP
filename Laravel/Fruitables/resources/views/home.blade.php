@@ -28,18 +28,18 @@
                 </div>
                 <div class="row text-white border-top py-3">
                     <p><b>INTERFACE</b></p>
-                    <p><a href="{{ url('/pages/image') }}">Images</a> <span class="float-end"><i class='bx bx-chevron-right'></i></span> </p>
-                    <p><a href="{{ url('/pages/advantage') }}">Advantages</a> <span class="float-end"><i class='bx bx-chevron-right'></i></span> </p>
-                    <p><a href="{{ url('/pages/fruit') }}">Fruits</a> <span class="float-end"><i class='bx bx-chevron-right'></i></span> </p>
-                    <p><a href="{{ url('/pages/offer') }}">Offers</a> <span class="float-end"><i class='bx bx-chevron-right'></i></span> </p>
-                    <p><a href="{{ url('/pages/vegetable') }}">Vegetables</a> <span class="float-end"><i class='bx bx-chevron-right'></i></span> </p>
-                    <p><a href="{{ url('/pages/best') }}">Bests</a> <span class="float-end"><i class='bx bx-chevron-right'></i></span> </p>
-                    <p><a href="{{ url('/pages/best1') }}">Best1s</a> <span class="float-end"><i class='bx bx-chevron-right'></i></span> </p>
-                    <p><a href="{{ url('/pages/number') }}">Numbers</a> <span class="float-end"><i class='bx bx-chevron-right'></i></span> </p>
-                    <p><a href="{{ url('/pages/testimonial') }}">Testimonies</a> <span class="float-end"><i class='bx bx-chevron-right'></i></span> </p>
+                    <p ><a class="text-info" href="{{ url('/pages/image') }}">Images</a> <span class="float-end"><i class='bx bx-chevron-right'></i></span> </p>
+                    <p><a class="text-info" href="{{ url('/pages/advantage') }}">Advantages</a> <span class="float-end"><i class='bx bx-chevron-right'></i></span> </p>
+                    <p><a class="text-info" href="{{ url('/pages/fruit') }}">Fruits</a> <span class="float-end"><i class='bx bx-chevron-right'></i></span> </p>
+                    <p><a class="text-info" href="{{ url('/pages/offer') }}">Offers</a> <span class="float-end"><i class='bx bx-chevron-right'></i></span> </p>
+                    <p><a class="text-info" href="{{ url('/pages/vegetable') }}">Vegetables</a> <span class="float-end"><i class='bx bx-chevron-right'></i></span> </p>
+                    <p><a class="text-info" href="{{ url('/pages/best') }}">Bests</a> <span class="float-end"><i class='bx bx-chevron-right'></i></span> </p>
+                    <p><a class="text-info" href="{{ url('/pages/best1') }}">Best1s</a> <span class="float-end"><i class='bx bx-chevron-right'></i></span> </p>
+                    <p><a class="text-info" href="{{ url('/pages/number') }}">Numbers</a> <span class="float-end"><i class='bx bx-chevron-right'></i></span> </p>
+                    <p><a class="text-info" href="{{ url('/pages/testimonial') }}">Testimonies</a> <span class="float-end"><i class='bx bx-chevron-right'></i></span> </p>
                 </div>
                 <div class="row text-white border-top py-3">
-                    <p><b><a href="{{ url('/') }}">Welcome</a></b></p>
+                    <p><b><a class="text-info" href="{{ url('/') }}">Welcome</a></b></p>
                     <p><i class='bx bxs-folder'></i> Pages <span class="float-end"><i class='bx bx-chevron-right'></i></span></p>
                     <p><i class='bx bx-line-chart'></i> Charts</p>
                     <p><i class='bx bx-table' ></i> Tables</p>
