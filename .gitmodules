@@ -1,0 +1,3 @@
+[submodule "Laravel/Fruitables"]
+	path = Laravel/Fruitables
+	url = https://github.com/PACIFIQUEGIT/PHP.git
