@@ -11,6 +11,9 @@ use App\Http\Controllers\BestController;
 use App\Http\Controllers\Best1Controller;
 use App\Http\Controllers\NumberController;
 use App\Http\Controllers\TestimonialController;
+use App\Http\Controllers\RoleController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProductController;
 
 
 
@@ -51,6 +54,15 @@ Route::get('/admin', function () {
 })->middleware('auth');
 
 Auth::routes(['register' => false]);
+
+Route::group(['middleware' => ['auth']], function() {
+    Route::resource('roles', RoleController::class);
+    Route::resource('users', UserController::class);
+    Route::resource('products', ProductController::class);
+});
+
+// Define the register route
+Route::get('/register', 'Auth\RegisterController@showRegistrationForm')->name('register');
 
 
 
